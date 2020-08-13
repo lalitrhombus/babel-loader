@@ -19,7 +19,8 @@ if (/^6\./.test(babel.version)) {
   );
 }
 
-const { version } = require("../package.json");
+const packageJson = require("../package.json");
+const { version } = packageJson;
 const cache = require("./cache");
 const transform = require("./transform");
 const injectCaller = require("./injectCaller");
